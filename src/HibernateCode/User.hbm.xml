@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-6-28 19:34:02 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="HibernateCode.User" table="user" catalog="microsigns">
+        <id name="userid" type="int">
+            <column name="userid" />
+            <generator class="identity" />
+        </id>
+        <property name="phonenumber" type="string">
+            <column name="phonenumber" not-null="true" />
+        </property>
+        <property name="md5code" type="string">
+            <column name="md5code" not-null="true" />
+        </property>
+        <property name="md5password" type="string">
+            <column name="md5password" not-null="true" />
+        </property>
+        <property name="token" type="string">
+            <column name="token" not-null="true" />
+        </property>
+        <property name="nickname" type="string">
+            <column name="nickname" not-null="true" />
+        </property>
+        <property name="headportrait" type="string">
+            <column name="headportrait" not-null="true" />
+        </property>
+        <property name="sex" type="string">
+            <column name="sex" not-null="true" />
+        </property>
+        <property name="signature" type="string">
+            <column name="signature" />
+        </property>
+        <property name="place" type="string">
+            <column name="place" />
+        </property>
+        <property name="registtime" type="timestamp">
+            <column name="registtime" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
